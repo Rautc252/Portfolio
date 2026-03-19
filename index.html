@@ -1,94 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Chetan | Portfolio</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chetan Raut | Full Stack Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
 <body>
 
-<header>
-<h1>Chetan Raut</h1>
-<p>Full Stack Java Developer</p>
-</header>
+  <!-- Custom cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
 
-<nav>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-</nav>
+  <!-- Animated background -->
+  <canvas id="bg-canvas"></canvas>
 
-<section id="about">
-<h2>About Me</h2>
-<p>
-Hello, I am Chetan, a Full Stack Java Developer specializing in
-Spring Boot, Microservices, Kafka, and scalable backend systems.
-I love building distributed systems and solving complex problems.
-</p>
-</section>
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">CR<span class="dot">.</span></div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-toggle" id="navToggle">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
 
-<section id="skills">
-<h2>Skills</h2>
+  <!-- HERO -->
+  <header id="hero">
+    <div class="hero-content">
+      <p class="hero-tag reveal-up" style="--d:0ms">Available for work</p>
+      <h1 class="hero-title reveal-up" style="--d:100ms">
+        Chetan<br><span class="gradient-text">Raut</span>
+      </h1>
+      <p class="hero-sub reveal-up" style="--d:200ms">Full Stack Java Developer</p>
+      <p class="hero-desc reveal-up" style="--d:300ms">
+        I architect high-performance systems using Spring Boot, Microservices & Kafka.
+      </p>
+      <div class="hero-actions reveal-up" style="--d:400ms">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-ghost">Let's Talk</a>
+      </div>
+    </div>
+    <div class="hero-image reveal-scale" style="--d:200ms">
+      <div class="avatar-ring">
+        <img src="images/mine.jpeg" alt="Chetan Raut" class="profile-pic" />
+        <div class="ring r1"></div>
+        <div class="ring r2"></div>
+        <div class="ring r3"></div>
+      </div>
+      <div class="floating-badge b1"><i class="fa-brands fa-java"></i> Java</div>
+      <div class="floating-badge b2"><i class="fa-solid fa-leaf"></i> Spring</div>
+      <div class="floating-badge b3"><i class="fa-solid fa-database"></i> MySQL</div>
+    </div>
+  </header>
 
-<div class="skills">
-<div>Java</div>
-<div>Spring Boot</div>
-<div>Microservices</div>
-<div>Kafka</div>
-<div>MySQL</div>
-<div>Docker</div>
-<div>Kubernetes</div>
-<div>Angular</div>
-</div>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-inner">
+      <p class="section-tag scroll-reveal">Who I Am</p>
+      <h2 class="section-title scroll-reveal">Building systems that <span class="gradient-text">scale</span></h2>
+      <div class="about-grid">
+        <div class="about-text scroll-reveal">
+          <p>
+            I'm a Full Stack Java Developer with a passion for architecting resilient, high-performance backend systems.
+            From designing event-driven microservices to securing APIs with post-quantum cryptography, I love pushing
+            engineering boundaries.
+          </p>
+          <p>
+            When I'm not coding, I'm exploring the intersection of AI and distributed systems — building things that
+            are as smart as they are scalable.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num">3+</span>
+              <span class="stat-label">Years Exp.</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">10+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">5+</span>
+              <span class="stat-label">Tech Stacks</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-card scroll-reveal">
+          <div class="card-inner">
+            <i class="fa-solid fa-terminal card-icon"></i>
+            <h3>Backend Specialist</h3>
+            <p>Spring Boot · Kafka · Microservices · REST APIs</p>
+          </div>
+          <div class="card-inner">
+            <i class="fa-solid fa-shield-halved card-icon"></i>
+            <h3>Security Focused</h3>
+            <p>Post-quantum crypto · OAuth2 · API Gateway</p>
+          </div>
+          <div class="card-inner">
+            <i class="fa-solid fa-layer-group card-icon"></i>
+            <h3>Full Stack</h3>
+            <p>Angular · Docker · Kubernetes · CI/CD</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-</section>
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-inner">
+      <p class="section-tag scroll-reveal">Tech Arsenal</p>
+      <h2 class="section-title scroll-reveal">Skills &amp; <span class="gradient-text">Technologies</span></h2>
+      <div class="skills-grid">
+        <div class="skill-card scroll-reveal" style="--i:0">
+          <div class="skill-icon"><i class="fa-brands fa-java"></i></div>
+          <span>Java</span>
+          <div class="skill-bar"><div class="skill-fill" style="--w:95%"></div></div>
+        </div>
+        <div class="skill-card scroll-reveal" style="--i:1">
+          <div class="skill-icon"><i class="fa-solid fa-leaf"></i></div>
+          <span>Spring Boot</span>
+          <div class="skill-bar"><div class="skill-fill" style="--w:92%"></div></div>
+        </div>
+        <div class="skill-card scroll-reveal" style="--i:2">
+          <div class="skill-icon"><i class="fa-solid fa-network-wired"></i></div>
+          <span>Microservices</span>
+          <div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div>
+        </div>
+        <div class="skill-card scroll-reveal" style="--i:3">
+          <div class="skill-icon"><i class="fa-solid fa-wave-square"></i></div>
+          <span>Kafka</span>
+          <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
+        </div>
+        <div class="skill-card scroll-reveal" style="--i:4">
+          <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+          <span>MySQL</span>
+          <div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div>
+        </div>
+        <div class="skill-card scroll-reveal" style="--i:5">
+          <div class="skill-icon"><i class="fa-brands fa-docker"></i></div>
+          <span>Docker</span>
+          <div class="skill-bar"><div class="skill-fill" style="--w:82%"></div></div>
+        </div>
+        <div class="skill-card scroll-reveal" style="--i:6">
+          <div class="skill-icon"><i class="fa-solid fa-dharmachakra"></i></div>
+          <span>Kubernetes</span>
+          <div class="skill-bar"><div class="skill-fill" style="--w:78%"></div></div>
+        </div>
+        <div class="skill-card scroll-reveal" style="--i:7">
+          <div class="skill-icon"><i class="fa-brands fa-angular"></i></div>
+          <span>Angular</span>
+          <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="projects">
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-inner">
+      <p class="section-tag scroll-reveal">What I've Built</p>
+      <h2 class="section-title scroll-reveal">Featured <span class="gradient-text">Projects</span></h2>
+      <div class="projects-grid">
 
-<h2>Projects</h2>
+        <div class="project-card scroll-reveal" style="--i:0">
+          <div class="project-num">01</div>
+          <div class="project-glow"></div>
+          <div class="project-tags">
+            <span>AI</span><span>Microservices</span><span>ML</span>
+          </div>
+          <h3>Self-Healing Microservices</h3>
+          <p>AI anomaly detection using Smile ML, Prometheus & Grafana. Services auto-recover from failures with zero downtime.</p>
+          <div class="project-footer">
+            <a href="#" class="project-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
 
-<div class="project">
-<h3>Self-Healing Microservices</h3>
-<p>AI-based anomaly detection using Java Smile, Prometheus and Grafana.</p>
-</div>
+        <div class="project-card scroll-reveal" style="--i:1">
+          <div class="project-num">02</div>
+          <div class="project-glow"></div>
+          <div class="project-tags">
+            <span>Security</span><span>Cryptography</span><span>API</span>
+          </div>
+          <h3>Quantum Secure API Gateway</h3>
+          <p>Post-quantum cryptography gateway using Kyber & Dilithium algorithms. Future-proof security for modern APIs.</p>
+          <div class="project-footer">
+            <a href="#" class="project-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
 
-<div class="project">
-<h3>Quantum Secure API Gateway</h3>
-<p>Post quantum cryptography gateway using Kyber and Dilithium.</p>
-</div>
+        <div class="project-card scroll-reveal" style="--i:2">
+          <div class="project-num">03</div>
+          <div class="project-glow"></div>
+          <div class="project-tags">
+            <span>Spring Boot</span><span>Angular</span><span>HR</span>
+          </div>
+          <h3>Attendance Management System</h3>
+          <p>Auto clock-in/out system with intelligent HR approval workflow, real-time analytics and leave management.</p>
+          <div class="project-footer">
+            <a href="#" class="project-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
 
-<div class="project">
-<h3>Attendance Management System</h3>
-<p>Spring Boot system with auto clock-in/out and HR approval.</p>
-</div>
+      </div>
+    </div>
+  </section>
 
-</section>
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-inner">
+      <p class="section-tag scroll-reveal">Get In Touch</p>
+      <h2 class="section-title scroll-reveal">Let's <span class="gradient-text">Connect</span></h2>
+      <div class="contact-wrapper">
+        <div class="contact-info scroll-reveal">
+          <p>Have a project in mind or want to collaborate? Drop me a message — I usually respond within 24 hours.</p>
+          <div class="contact-links">
+            <a href="mailto:your-email@gmail.com" class="contact-chip">
+              <i class="fa-solid fa-envelope"></i> your-email@gmail.com
+            </a>
+            <a href="https://github.com/" class="contact-chip">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <a href="https://linkedin.com/" class="contact-chip">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+          </div>
+        </div>
+        <form action="https://formsubmit.co/your-email@gmail.com" method="POST" class="contact-form scroll-reveal">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" name="name" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label>Your Email</label>
+              <input type="email" name="email" placeholder="john@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea name="message" placeholder="Tell me about your project..." rows="5"></textarea>
+          </div>
+          <button type="submit" class="btn-primary full-width">
+            Send Message <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
 
-<section id="contact">
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">CR<span class="dot">.</span></div>
+      <p class="footer-copy">© 2026 Chetan Raut. Built with passion.</p>
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
 
-<h2>Contact Me</h2>
-
-<form action="https://formsubmit.co/your-email@gmail.com" method="POST">
-
-<input type="text" name="name" placeholder="Your Name" required>
-
-<input type="email" name="email" placeholder="Your Email" required>
-
-<textarea name="message" placeholder="Your Message"></textarea>
-
-<button type="submit">Send Message</button>
-
-</form>
-
-</section>
-
-<footer>
-<p>© 2026 Chetan Portfolio</p>
-</footer>
-
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
