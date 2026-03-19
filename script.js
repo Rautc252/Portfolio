@@ -195,7 +195,7 @@ if (heroSub) {
     'Full Stack Java Developer',
   ];
   let roleIndex = 0;
-  let charIndex = 0;
+  let charIndex = 1;
   let isDeleting = false;
 
   function typewrite() {
@@ -210,10 +210,10 @@ if (heroSub) {
     if (!isDeleting && charIndex > current.length) {
       delay = 2000;
       isDeleting = true;
-    } else if (isDeleting && charIndex < 0) {
+    } else if (isDeleting && charIndex < 1) {
       isDeleting = false;
       roleIndex = (roleIndex + 1) % roles.length;
-      charIndex = 0;
+      charIndex = 1;
       delay = 400;
     }
 
