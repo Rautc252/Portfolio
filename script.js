@@ -193,9 +193,6 @@ const heroSub = document.querySelector('.hero-sub');
 if (heroSub) {
   const roles = [
     'Full Stack Java Developer',
-    'Microservices Architect',
-    'Spring Boot Expert',
-    'Kafka Enthusiast'
   ];
   let roleIndex = 0;
   let charIndex = 0;
